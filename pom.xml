@@ -141,6 +141,7 @@
     </plugins>
     </pluginManagement>
 
+    <plugins>
     <plugin>
 	<artifactId>maven-assembly-plugin</artifactId> 
 	<configuration> 
@@ -157,4 +158,3 @@
     </plugins>
   </build>
 </project>
-
