@@ -1,3 +1,4 @@
+ 
 package com.squareup.okhttp;
 import com.squareup.okhttp.internal.http.HttpAuthenticator;
 import com.squareup.okhttp.internal.http.HttpURLConnectionImpl;
@@ -20,16 +21,16 @@ import javax.net.ssl.SSLSocketFactory;
  * Configures and creates HTTP connections. 
  */
 public final class OkHttpClient {
-  private Proxy proxy;
-  private Set<Route> failedRoutes=Collections.synchronizedSet(new LinkedHashSet<Route>());
-  private ProxySelector proxySelector;
-  private CookieHandler cookieHandler;
-  private ResponseCache responseCache;
-  private SSLSocketFactory sslSocketFactory;
-  private HostnameVerifier hostnameVerifier;
-  private OkAuthenticator authenticator;
-  private ConnectionPool connectionPool;
-  private boolean followProtocolRedirects=true;
+  public Proxy proxy;
+  public Set<Route> failedRoutes=Collections.synchronizedSet(new LinkedHashSet<Route>());
+  public ProxySelector proxySelector;
+  public CookieHandler cookieHandler;
+  public ResponseCache responseCache;
+  public SSLSocketFactory sslSocketFactory;
+  public HostnameVerifier hostnameVerifier;
+  public OkAuthenticator authenticator;
+  public ConnectionPool connectionPool;
+  public boolean followProtocolRedirects=true;
   /** 
  * Sets the HTTP proxy that will be used by connections created by this client. This takes precedence over  {@link #setProxySelector}, which is only honored when this proxy is null (which it is by default). To disable proxy use completely, call  {@code setProxy(Proxy.NO_PROXY)}.
  */
