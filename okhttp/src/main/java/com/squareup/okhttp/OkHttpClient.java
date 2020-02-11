@@ -23,19 +23,19 @@ import javax.net.ssl.SSLSocketFactory;
 /** 
  * Configures and creates HTTP connections. 
  */
-public final class OkHttpClient {
-  private static List<String> DEFAULT_TRANSPORTS=Util.immutableList(Arrays.asList("spdy/3","http/1.1"));
-  private Proxy proxy;
-  private List<String> transports;
-  private Set<Route> failedRoutes;
-  private ProxySelector proxySelector;
-  private CookieHandler cookieHandler;
-  private ResponseCache responseCache;
-  private SSLSocketFactory sslSocketFactory;
-  private HostnameVerifier hostnameVerifier;
-  private OkAuthenticator authenticator;
-  private ConnectionPool connectionPool;
-  private boolean followProtocolRedirects=true;
+public class OkHttpClient {
+  public static List<String> DEFAULT_TRANSPORTS=Util.immutableList(Arrays.asList("spdy/3","http/1.1"));
+  public Proxy proxy;
+  public List<String> transports;
+  public Set<Route> failedRoutes;
+  public ProxySelector proxySelector;
+  public CookieHandler cookieHandler;
+  public ResponseCache responseCache;
+  public SSLSocketFactory sslSocketFactory;
+  public HostnameVerifier hostnameVerifier;
+  public OkAuthenticator authenticator;
+  public ConnectionPool connectionPool;
+  public boolean followProtocolRedirects=true;
   public OkHttpClient(){
     this.failedRoutes=Collections.synchronizedSet(new LinkedHashSet<Route>());
   }
