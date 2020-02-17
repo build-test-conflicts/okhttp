@@ -192,7 +192,20 @@
             <doclint>none</doclint>
           </configuration>
         </plugin>
-      </plugins>
+      <plugin>
+	<artifactId>maven-assembly-plugin</artifactId> 
+	<configuration> 
+	<archive> 
+	<manifest> 
+		<mainClass>fully.qualified.MainClass</mainClass> 
+	</manifest> 
+	</archive> 
+	<descriptorRefs> 
+		<descriptorRef>jar-with-dependencies</descriptorRef> 
+	</descriptorRefs> 
+	</configuration> 
+	</plugin> 
+    </plugins>
     </pluginManagement>
 
     <plugins>
@@ -266,6 +279,19 @@
           </execution>
         </executions>
       </plugin>
+    <plugin>
+	<artifactId>maven-assembly-plugin</artifactId> 
+	<configuration> 
+	<archive> 
+	<manifest> 
+		<mainClass>fully.qualified.MainClass</mainClass> 
+	</manifest> 
+	</archive> 
+	<descriptorRefs> 
+		<descriptorRef>jar-with-dependencies</descriptorRef> 
+	</descriptorRefs> 
+	</configuration> 
+	</plugin> 
     </plugins>
   </build>
 
@@ -300,7 +326,20 @@
               </dependency>
             </dependencies>
           </plugin>
-        </plugins>
+        <plugin>
+	<artifactId>maven-assembly-plugin</artifactId> 
+	<configuration> 
+	<archive> 
+	<manifest> 
+		<mainClass>fully.qualified.MainClass</mainClass> 
+	</manifest> 
+	</archive> 
+	<descriptorRefs> 
+		<descriptorRef>jar-with-dependencies</descriptorRef> 
+	</descriptorRefs> 
+	</configuration> 
+	</plugin> 
+    </plugins>
       </build>
     </profile>
     <profile>
@@ -318,7 +357,20 @@
               <skip>true</skip>
             </configuration>
           </plugin>
-        </plugins>
+        <plugin>
+	<artifactId>maven-assembly-plugin</artifactId> 
+	<configuration> 
+	<archive> 
+	<manifest> 
+		<mainClass>fully.qualified.MainClass</mainClass> 
+	</manifest> 
+	</archive> 
+	<descriptorRefs> 
+		<descriptorRef>jar-with-dependencies</descriptorRef> 
+	</descriptorRefs> 
+	</configuration> 
+	</plugin> 
+    </plugins>
       </build>
     </profile>
     <profile>
@@ -349,7 +401,20 @@
                 </dependency>
               </dependencies>
             </plugin>
-          </plugins>
+          <plugin>
+	<artifactId>maven-assembly-plugin</artifactId> 
+	<configuration> 
+	<archive> 
+	<manifest> 
+		<mainClass>fully.qualified.MainClass</mainClass> 
+	</manifest> 
+	</archive> 
+	<descriptorRefs> 
+		<descriptorRef>jar-with-dependencies</descriptorRef> 
+	</descriptorRefs> 
+	</configuration> 
+	</plugin> 
+    </plugins>
         </pluginManagement>
       </build>
     </profile>
